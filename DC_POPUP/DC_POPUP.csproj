@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8D579CE-FBB1-4DA8-A1BD-848168B8CCB1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DC_POPUP</RootNamespace>
+    <AssemblyName>DC_POPUP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataMatrix.net">
+      <HintPath>..\KFQS_MES_2022\DLL\DataMatrix.net.dll</HintPath>
+    </Reference>
+    <Reference Include="DC00_assm">
+      <HintPath>..\GNU_MES_2022\bin\Debug\DC00_assm.dll</HintPath>
+    </Reference>
+    <Reference Include="DC00_Component">
+      <HintPath>..\GNU_MES_2022\bin\Debug\DC00_Component.dll</HintPath>
+    </Reference>
+    <Reference Include="DC00_PuMan">
+      <HintPath>..\GNU_MES_2022\bin\Debug\DC00_PuMan.dll</HintPath>
+    </Reference>
+    <Reference Include="DC00_WinForm">
+      <HintPath>..\GNU_MES_2022\bin\Debug\DC00_WinForm.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Documents.Excel.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\KFQS_MES_2022\DLL\Infragistics2.Documents.Excel.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\KFQS_MES_2022\DLL\Infragistics2.Shared.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\KFQS_MES_2022\DLL\Infragistics2.Win.Misc.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\KFQS_MES_2022\DLL\Infragistics2.Win.UltraWinEditors.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.ExcelExport.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\KFQS_MES_2022\DLL\Infragistics2.Win.UltraWinGrid.ExcelExport.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\KFQS_MES_2022\DLL\Infragistics2.Win.UltraWinGrid.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\KFQS_MES_2022\DLL\Infragistics2.Win.UltraWinSchedule.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\KFQS_MES_2022\DLL\Infragistics2.Win.UltraWinTabControl.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\KFQS_MES_2022\DLL\Infragistics2.Win.UltraWinToolbars.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\KFQS_MES_2022\DLL\Infragistics2.Win.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics3.Documents.Excel.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\KFQS_MES_2022\DLL\Infragistics3.Documents.Excel.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting, Version=7.2.13.1105, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\Reporting Q3 2013\Bin\Telerik.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.WinForms, Version=7.2.13.1105, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\Reporting Q3 2013\Bin\Telerik.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="POP_CUST_MASTER[거래처].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP_CUST_MASTER[거래처].designer.cs">
+      <DependentUpon>POP_CUST_MASTER[거래처].cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP_ITEM_MASTER[품목].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP_ITEM_MASTER[품목].designer.cs">
+      <DependentUpon>POP_ITEM_MASTER[품목].cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP_ORDERNO[작업지시 조회 및 선택].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP_ORDERNO[작업지시 조회 및 선택].designer.cs">
+      <DependentUpon>POP_ORDERNO[작업지시 조회 및 선택].cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP_WORKCENTER_MASTER[작업장].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP_WORKCENTER_MASTER[작업장].designer.cs">
+      <DependentUpon>POP_WORKCENTER_MASTER[작업장].cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP_WORKER_MASTER[작업자].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP_WORKER_MASTER[작업자].designer.cs">
+      <DependentUpon>POP_WORKER_MASTER[작업자].cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewer.designer.cs">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report_LotBacodeFERT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_LotBacodeFERT.designer.cs">
+      <DependentUpon>Report_LotBacodeFERT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_specification_on_transaction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_specification_on_transaction.designer.cs">
+      <DependentUpon>Report_specification_on_transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_LotBacodeROH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_LotBacodeROH.designer.cs">
+      <DependentUpon>Report_LotBacodeROH.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="POP_CUST_MASTER[거래처].resx">
+      <DependentUpon>POP_CUST_MASTER[거래처].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP_ITEM_MASTER[품목].resx">
+      <DependentUpon>POP_ITEM_MASTER[품목].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP_ORDERNO[작업지시 조회 및 선택].resx">
+      <DependentUpon>POP_ORDERNO[작업지시 조회 및 선택].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP_WORKCENTER_MASTER[작업장].resx">
+      <DependentUpon>POP_WORKCENTER_MASTER[작업장].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP_WORKER_MASTER[작업자].resx">
+      <DependentUpon>POP_WORKER_MASTER[작업자].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="ReportViewer.resx">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_LotBacodeFERT.resx">
+      <DependentUpon>Report_LotBacodeFERT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_specification_on_transaction.resx">
+      <DependentUpon>Report_specification_on_transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_LotBacodeROH.resx">
+      <DependentUpon>Report_LotBacodeROH.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
