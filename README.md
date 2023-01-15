@@ -1,2 +1,2 @@
 # KDT_MES_EDU
-MES 학습
+MES 학습 중~
