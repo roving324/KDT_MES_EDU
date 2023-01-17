@@ -1,4 +1,6 @@
-﻿using DC00_assm;
+﻿using DC_POPUP;
+using DC00_assm;
+using DC00_Component;
 using Infragistics.Win;
 using System;
 using System.Collections.Generic;
@@ -41,7 +43,7 @@ namespace KDT_Form
             // 구매자재 발주                                                                            
             GridUtill.InitColumnUltraGrid(grid1, "ITEMCODE" , "품목"    , GridColDataType_emu.VarChar   , 200, HAlign.Left  , true, false);
             GridUtill.InitColumnUltraGrid(grid1, "ITEMNAME" , "품목명"  , GridColDataType_emu.VarChar   , 120, HAlign.Left  , true, false);
-            GridUtill.InitColumnUltraGrid(grid1, "MARLOTNO" , "LOT번호" , GridColDataType_emu.VarChar   , 200, HAlign.Center, true, false);
+            GridUtill.InitColumnUltraGrid(grid1, "MATLOTNO" , "LOT번호" , GridColDataType_emu.VarChar   , 200, HAlign.Center, true, false);
             GridUtill.InitColumnUltraGrid(grid1, "WHCODE"   , "창고"    , GridColDataType_emu.VarChar   , 150, HAlign.Left  , true, false);
             GridUtill.InitColumnUltraGrid(grid1, "STOCKQTY" , "재고수량", GridColDataType_emu.Double    ,  80, HAlign.Right , true, false);
             GridUtill.InitColumnUltraGrid(grid1, "UNITCODE" , "단위"    , GridColDataType_emu.VarChar   ,  60, HAlign.Left  , true, false);
@@ -115,5 +117,37 @@ namespace KDT_Form
             }
         }
         #endregion
+
+        private void btnLOTMake_Click(object sender, EventArgs e)
+        {
+            // 원자재 식별표 발행
+            if (grid1.ActiveRow == null) return;
+
+            // 바코드 디자이너에 던져줄 원자재 품목 데이터 변수 설정.
+            DataRow drRow = ((DataTable)grid1.DataSource).NewRow();
+            drRow["MATLOTNO"] = Convert.ToString(grid1.ActiveRow.Cells["MATLOTNO"].Value);
+            drRow["ITEMCODE"] = Convert.ToString(grid1.ActiveRow.Cells["ITEMCODE"].Value);
+            drRow["ITEMNAME"] = Convert.ToString(grid1.ActiveRow.Cells["ITEMNAME"].Value);
+            drRow["STOCKQTY"] = Convert.ToString(grid1.ActiveRow.Cells["STOCKQTY"].Value);
+            drRow["UNITCODE"] = Convert.ToString(grid1.ActiveRow.Cells["UNITCODE"].Value);
+
+
+            // 바코드 디자이너에 출력할 식별표 데이터 매핑
+            Report_LotBacodeROH ROH_BARCODE = new Report_LotBacodeROH();
+
+            // 레포트 북 객체 생성
+            Telerik.Reporting.ReportBook reportBook = new Telerik.Reporting.ReportBook();
+
+            // 레포트 북에 데이터 매핑
+            ROH_BARCODE.DataSource = drRow;
+
+            // 디자인을 레포트 북에 등록
+            reportBook.Reports.Add(ROH_BARCODE);
+
+            // 바코드 디자이너 뷰어(미리보기)에 레포트 북 등록 및 표현
+            ReportViewer Viewer = new ReportViewer(reportBook, 1);
+            Viewer.ShowDialog();
+
+        }
     }
 }

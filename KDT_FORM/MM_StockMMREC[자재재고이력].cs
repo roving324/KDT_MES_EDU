@@ -11,11 +11,11 @@ using System.Windows.Forms;
 #region < HEADER AREA >
 // *---------------------------------------------------------------------------------------------*
 //   Form ID      : MM_StockMMREC
-//   Form Name    : 자재 재고 현황
+//   Form Name    : 자재재고이력
 //   Name Space   : KDT_Form
 //   Created Date : 2023-01-04
 //   Made By      : HJY
-//   Description  : 자재 재고 현황
+//   Description  : 자재재고이력
 // *---------------------------------------------------------------------------------------------*
 #endregion
 
