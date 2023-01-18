@@ -66,6 +66,9 @@ namespace KDT_Form
             Common.FillComboboxMaster(cboPlantCode, dtTemp);             // 콤보박스 컨트롤에 셋팅.
             UltraGridUtil.SetComboUltraGrid(grid1, "PLANTCODE", dtTemp); //그리드에 콤보박스 셋팅.
 
+            dtTemp = Common.StandardCODE("UNITCODE"); // 단위
+            UltraGridUtil.SetComboUltraGrid(grid1, "UNITCODE", dtTemp);
+
             // 창고
             dtTemp = Common.StandardCODE("WHCODE");
             UltraGridUtil.SetComboUltraGrid(grid1, "WHCODE", dtTemp);

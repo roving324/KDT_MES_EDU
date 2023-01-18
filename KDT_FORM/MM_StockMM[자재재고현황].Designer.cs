@@ -127,7 +127,7 @@
             this.sLabel2.RequireFlag = DC00_Component.SLabel.RequireFlagEnum.NO;
             this.sLabel2.Size = new System.Drawing.Size(100, 23);
             this.sLabel2.TabIndex = 1;
-            this.sLabel2.Text = "LOT NO";
+            this.sLabel2.Text = "LOT 번호";
             // 
             // txtLotNo
             // 

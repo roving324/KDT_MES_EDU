@@ -54,6 +54,12 @@
     <Compile Include="MM_StockMMREC[자재재고이력].Designer.cs">
       <DependentUpon>MM_StockMMREC[자재재고이력].cs</DependentUpon>
     </Compile>
+    <Compile Include="PP_ActureOutput[생산실적등록] .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PP_ActureOutput[생산실적등록] .Designer.cs">
+      <DependentUpon>PP_ActureOutput[생산실적등록] .cs</DependentUpon>
+    </Compile>
     <Compile Include="MM_StockOUT[원자재생산출고].cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
   <ItemGroup>
     <EmbeddedResource Include="MM_StockMMREC[자재재고이력].resx">
       <DependentUpon>MM_StockMMREC[자재재고이력].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PP_ActureOutput[생산실적등록] .resx">
+      <DependentUpon>PP_ActureOutput[생산실적등록] .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MM_StockOUT[원자재생산출고].resx">
       <DependentUpon>MM_StockOUT[원자재생산출고].cs</DependentUpon>
