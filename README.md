@@ -21,12 +21,13 @@ RSMSG = Convert.ToString(cmd.Parameters["RS_MSG"].Value);
 RSCODE = Convert.ToString(cmd.Parameters["RS_CODE"].Value);
 ```
 
-# UPDATE 와 INSET의 SQL 로직 구현
+# UPDATE OR INSET의 SQL 로직 구현
 ```
 UPDATE TABLE.A
-   IF(@@ROWCOUNT = 0)
+IF(@@ROWCOUNT = 0)
 BEGIN
 INSERT INTO TABLE.B
 END
-SET @RS_CODE = 'S'
 ```
+
+BOM 품목을 생산하는데 필요한 상/하위 리스트를 모아놓은 것(필수데이터) 완성품목 투입품목 1수량 단위 투입수량
