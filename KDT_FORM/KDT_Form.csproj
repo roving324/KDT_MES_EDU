@@ -48,6 +48,30 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="PP_StockWIPRec[재공 재고 입출 이력].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PP_StockWIPRec[재공 재고 입출 이력].designer.cs">
+      <DependentUpon>PP_StockWIPRec[재공 재고 입출 이력].cs</DependentUpon>
+    </Compile>
+    <Compile Include="PP_StockWIP[재공 재고조회].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PP_StockWIP[재공 재고조회].designer.cs">
+      <DependentUpon>PP_StockWIP[재공 재고조회].cs</DependentUpon>
+    </Compile>
+    <Compile Include="PP_WorkerPerProd[작업자 일별 생산 실적].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PP_WorkerPerProd[작업자 일별 생산 실적].Designer.cs">
+      <DependentUpon>PP_WorkerPerProd[작업자 일별 생산 실적].cs</DependentUpon>
+    </Compile>
+    <Compile Include="AP_OrderPerProduct[작업지시 별 생산실적 현황].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AP_OrderPerProduct[작업지시 별 생산실적 현황].Designer.cs">
+      <DependentUpon>AP_OrderPerProduct[작업지시 별 생산실적 현황].cs</DependentUpon>
+    </Compile>
     <Compile Include="MM_StockMMREC[자재재고이력].cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +226,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="PP_StockWIPRec[재공 재고 입출 이력].resx">
+      <DependentUpon>PP_StockWIPRec[재공 재고 입출 이력].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PP_StockWIP[재공 재고조회].resx">
+      <DependentUpon>PP_StockWIP[재공 재고조회].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PP_WorkerPerProd[작업자 일별 생산 실적].resx">
+      <DependentUpon>PP_WorkerPerProd[작업자 일별 생산 실적].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AP_OrderPerProduct[작업지시 별 생산실적 현황].resx">
+      <DependentUpon>AP_OrderPerProduct[작업지시 별 생산실적 현황].cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MM_StockMMREC[자재재고이력].resx">
       <DependentUpon>MM_StockMMREC[자재재고이력].cs</DependentUpon>
     </EmbeddedResource>

@@ -76,9 +76,13 @@ namespace KDT_Form
             dtTemp = Common.StandardCODE("INOUTFLAG");
             UltraGridUtil.SetComboUltraGrid(grid1, "INOUTFLAG", dtTemp);
 
-            // 품목
-            // ROH : 원자재, HALB : 반제품, FERT : 완제품
-            dtTemp = Common.Get_ItemCode(new string[] { "ROH"});
+			// 단위
+			dtTemp = Common.StandardCODE("UNITCODE");
+			UltraGridUtil.SetComboUltraGrid(grid1, "UNITCODE", dtTemp);
+
+			// 품목
+			// ROH : 원자재, HALB : 반제품, FERT : 완제품
+			dtTemp = Common.Get_ItemCode(new string[] { "ROH"});
             Common.FillComboboxMaster(cboItemCode, dtTemp);
         }
         #endregion
@@ -125,6 +129,6 @@ namespace KDT_Form
                 helper.Close();
             }
         }
-        #endregion
-    }
+		#endregion
+	}
 }
