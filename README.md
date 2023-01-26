@@ -79,3 +79,8 @@ reportBook.Reports.Add(LotBacodeFERT);
 ReportViewer Viewer = new ReportViewer(reportBook, 1);
 Viewer.ShowDialog();
 ```
+
+<br/>
+
+# 프로세스 흐름도
+![프로세스 흐름도](https://github.com/roving324/KDT_MES_EDU/blob/master/IMG/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%ED%9D%90%EB%A6%84%EB%8F%84.png)
