@@ -29,23 +29,6 @@ INSERT INTO TABLE.B
 END
 ```
 
-BOM 품목을 생산하는데 필요한 상/하위 리스트를 모아놓은 것(필수데이터) 완성품목 투입품목 1수량 단위 투입수량
-LOT
-
-# 구현화면
-![BOM](https://github.com/roving324/KDT_MES_EDU/blob/master/IMG/BOM.PNG)
-BOM
-
-<br/>
-
-
-
-![생산실적등록](https://github.com/roving324/KDT_MES_EDU/blob/master/IMG/%EC%83%9D%EC%82%B0%EC%8B%A4%EC%A0%81.PNG)
-생산실적등록
-
-![작업자 일별 실적 조회](https://github.com/roving324/KDT_MES_EDU/blob/master/IMG/%EC%9E%91%EC%97%85%EC%9E%90%20%EC%9D%BC%EB%B3%84%20%EC%8B%A4%EC%A0%81.PNG)
-작업자 일별 실적 조회
-
 ##  하위 행의 정보가 같을 경우 머지(MERGE, 병합) 한다.
 ```
 grid1.DisplayLayout.Override.MergedCellContentArea = MergedCellContentArea.VisibleRect;
@@ -79,6 +62,23 @@ reportBook.Reports.Add(LotBacodeFERT);
 ReportViewer Viewer = new ReportViewer(reportBook, 1);
 Viewer.ShowDialog();
 ```
+
+BOM 품목을 생산하는데 필요한 상/하위 리스트를 모아놓은 것(필수데이터) 완성품목 투입품목 1수량 단위 투입수량
+LOT
+
+# 구현화면
+![BOM](https://github.com/roving324/KDT_MES_EDU/blob/master/IMG/BOM.PNG)
+BOM
+
+<br/>
+
+
+
+![생산실적등록](https://github.com/roving324/KDT_MES_EDU/blob/master/IMG/%EC%83%9D%EC%82%B0%EC%8B%A4%EC%A0%81.PNG)
+생산실적등록
+
+![작업자 일별 실적 조회](https://github.com/roving324/KDT_MES_EDU/blob/master/IMG/%EC%9E%91%EC%97%85%EC%9E%90%20%EC%9D%BC%EB%B3%84%20%EC%8B%A4%EC%A0%81.PNG)
+작업자 일별 실적 조회
 
 <br/>
 
