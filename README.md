@@ -29,7 +29,7 @@ INSERT INTO TABLE.B
 END
 ```
 
-##  하위 행의 정보가 같을 경우 머지(MERGE, 병합) 한다.
+##  하위 행의 정보가 같을 경우 (MERGE, 병합)
 ```
 grid1.DisplayLayout.Override.MergedCellContentArea = MergedCellContentArea.VisibleRect;
 grid1.DisplayLayout.Bands[0].Columns["PLANTCODE"].MergedCellStyle = MergedCellStyle.Always;
