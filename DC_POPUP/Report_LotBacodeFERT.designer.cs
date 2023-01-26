@@ -23,16 +23,16 @@
 			this.barcode2 = new Telerik.Reporting.Barcode();
 			this.textBox2 = new Telerik.Reporting.TextBox();
 			this.textBox3 = new Telerik.Reporting.TextBox();
-			this.textBox4 = new Telerik.Reporting.TextBox();
 			this.textBox5 = new Telerik.Reporting.TextBox();
-			this.textBox6 = new Telerik.Reporting.TextBox();
+			this.textBox4 = new Telerik.Reporting.TextBox();
 			this.textBox7 = new Telerik.Reporting.TextBox();
-			this.textBox8 = new Telerik.Reporting.TextBox();
+			this.textBox6 = new Telerik.Reporting.TextBox();
 			this.textBox9 = new Telerik.Reporting.TextBox();
-			this.textBox10 = new Telerik.Reporting.TextBox();
+			this.textBox8 = new Telerik.Reporting.TextBox();
 			this.textBox11 = new Telerik.Reporting.TextBox();
-			this.textBox12 = new Telerik.Reporting.TextBox();
+			this.textBox10 = new Telerik.Reporting.TextBox();
 			this.textBox13 = new Telerik.Reporting.TextBox();
+			this.textBox12 = new Telerik.Reporting.TextBox();
 			this.textBox15 = new Telerik.Reporting.TextBox();
 			this.textBox14 = new Telerik.Reporting.TextBox();
 			this.barcode3 = new Telerik.Reporting.Barcode();
@@ -168,6 +168,21 @@
 			this.textBox3.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
 			this.textBox3.Value = "";
 			// 
+			// textBox5
+			// 
+			this.textBox5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(2.799D));
+			this.textBox5.Name = "textBox5";
+			this.textBox5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.2D), Telerik.Reporting.Drawing.Unit.Cm(0.799D));
+			this.textBox5.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
+			this.textBox5.Style.Font.Bold = true;
+			this.textBox5.Style.Font.Name = "Microsoft Sans Serif";
+			this.textBox5.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
+			this.textBox5.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(0D);
+			this.textBox5.Style.Padding.Right = Telerik.Reporting.Drawing.Unit.Point(0D);
+			this.textBox5.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+			this.textBox5.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+			this.textBox5.Value = "품명";
+			// 
 			// textBox4
 			// 
 			this.textBox4.Bindings.Add(new Telerik.Reporting.Binding("Value", "= Fields.ITEMNAME"));
@@ -184,20 +199,20 @@
 			this.textBox4.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
 			this.textBox4.Value = "";
 			// 
-			// textBox5
+			// textBox7
 			// 
-			this.textBox5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(2.799D));
-			this.textBox5.Name = "textBox5";
-			this.textBox5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.2D), Telerik.Reporting.Drawing.Unit.Cm(0.799D));
-			this.textBox5.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
-			this.textBox5.Style.Font.Bold = true;
-			this.textBox5.Style.Font.Name = "Microsoft Sans Serif";
-			this.textBox5.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
-			this.textBox5.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(0D);
-			this.textBox5.Style.Padding.Right = Telerik.Reporting.Drawing.Unit.Point(0D);
-			this.textBox5.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
-			this.textBox5.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-			this.textBox5.Value = "품명";
+			this.textBox7.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(3.598D));
+			this.textBox7.Name = "textBox7";
+			this.textBox7.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.2D), Telerik.Reporting.Drawing.Unit.Cm(0.799D));
+			this.textBox7.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
+			this.textBox7.Style.Font.Bold = true;
+			this.textBox7.Style.Font.Name = "Microsoft Sans Serif";
+			this.textBox7.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
+			this.textBox7.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(0D);
+			this.textBox7.Style.Padding.Right = Telerik.Reporting.Drawing.Unit.Point(0D);
+			this.textBox7.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+			this.textBox7.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+			this.textBox7.Value = "규격";
 			// 
 			// textBox6
 			// 
@@ -215,20 +230,20 @@
 			this.textBox6.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
 			this.textBox6.Value = "";
 			// 
-			// textBox7
+			// textBox9
 			// 
-			this.textBox7.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(3.598D));
-			this.textBox7.Name = "textBox7";
-			this.textBox7.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.2D), Telerik.Reporting.Drawing.Unit.Cm(0.799D));
-			this.textBox7.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
-			this.textBox7.Style.Font.Bold = true;
-			this.textBox7.Style.Font.Name = "Microsoft Sans Serif";
-			this.textBox7.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
-			this.textBox7.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(0D);
-			this.textBox7.Style.Padding.Right = Telerik.Reporting.Drawing.Unit.Point(0D);
-			this.textBox7.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
-			this.textBox7.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-			this.textBox7.Value = "규격";
+			this.textBox9.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(4.398D));
+			this.textBox9.Name = "textBox9";
+			this.textBox9.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.2D), Telerik.Reporting.Drawing.Unit.Cm(0.799D));
+			this.textBox9.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
+			this.textBox9.Style.Font.Bold = true;
+			this.textBox9.Style.Font.Name = "Microsoft Sans Serif";
+			this.textBox9.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
+			this.textBox9.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(0D);
+			this.textBox9.Style.Padding.Right = Telerik.Reporting.Drawing.Unit.Point(0D);
+			this.textBox9.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+			this.textBox9.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+			this.textBox9.Value = "LOT";
 			// 
 			// textBox8
 			// 
@@ -246,37 +261,6 @@
 			this.textBox8.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
 			this.textBox8.Value = "";
 			// 
-			// textBox9
-			// 
-			this.textBox9.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(4.398D));
-			this.textBox9.Name = "textBox9";
-			this.textBox9.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.2D), Telerik.Reporting.Drawing.Unit.Cm(0.799D));
-			this.textBox9.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
-			this.textBox9.Style.Font.Bold = true;
-			this.textBox9.Style.Font.Name = "Microsoft Sans Serif";
-			this.textBox9.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
-			this.textBox9.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(0D);
-			this.textBox9.Style.Padding.Right = Telerik.Reporting.Drawing.Unit.Point(0D);
-			this.textBox9.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
-			this.textBox9.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-			this.textBox9.Value = "LOT";
-			// 
-			// textBox10
-			// 
-			this.textBox10.Bindings.Add(new Telerik.Reporting.Binding("Value", "= Fields.PRODDATE"));
-			this.textBox10.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.226D), Telerik.Reporting.Drawing.Unit.Cm(5.197D));
-			this.textBox10.Name = "textBox10";
-			this.textBox10.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9.6D), Telerik.Reporting.Drawing.Unit.Cm(0.799D));
-			this.textBox10.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
-			this.textBox10.Style.Font.Bold = true;
-			this.textBox10.Style.Font.Name = "Microsoft Sans Serif";
-			this.textBox10.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
-			this.textBox10.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(0D);
-			this.textBox10.Style.Padding.Right = Telerik.Reporting.Drawing.Unit.Point(0D);
-			this.textBox10.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
-			this.textBox10.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-			this.textBox10.Value = "";
-			// 
 			// textBox11
 			// 
 			this.textBox11.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.026D), Telerik.Reporting.Drawing.Unit.Cm(5.197D));
@@ -291,6 +275,37 @@
 			this.textBox11.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
 			this.textBox11.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
 			this.textBox11.Value = "생산일시";
+			// 
+			// textBox10
+			// 
+			this.textBox10.Bindings.Add(new Telerik.Reporting.Binding("Value", "= Fields.MAKEDATE"));
+			this.textBox10.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.226D), Telerik.Reporting.Drawing.Unit.Cm(5.197D));
+			this.textBox10.Name = "textBox10";
+			this.textBox10.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9.6D), Telerik.Reporting.Drawing.Unit.Cm(0.799D));
+			this.textBox10.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
+			this.textBox10.Style.Font.Bold = true;
+			this.textBox10.Style.Font.Name = "Microsoft Sans Serif";
+			this.textBox10.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
+			this.textBox10.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(0D);
+			this.textBox10.Style.Padding.Right = Telerik.Reporting.Drawing.Unit.Point(0D);
+			this.textBox10.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+			this.textBox10.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+			this.textBox10.Value = "";
+			// 
+			// textBox13
+			// 
+			this.textBox13.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(5.996D));
+			this.textBox13.Name = "textBox13";
+			this.textBox13.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.2D), Telerik.Reporting.Drawing.Unit.Cm(1.104D));
+			this.textBox13.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
+			this.textBox13.Style.Font.Bold = true;
+			this.textBox13.Style.Font.Name = "Microsoft Sans Serif";
+			this.textBox13.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
+			this.textBox13.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(0D);
+			this.textBox13.Style.Padding.Right = Telerik.Reporting.Drawing.Unit.Point(0D);
+			this.textBox13.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+			this.textBox13.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+			this.textBox13.Value = "수량";
 			// 
 			// textBox12
 			// 
@@ -307,21 +322,6 @@
 			this.textBox12.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
 			this.textBox12.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
 			this.textBox12.Value = "";
-			// 
-			// textBox13
-			// 
-			this.textBox13.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(5.996D));
-			this.textBox13.Name = "textBox13";
-			this.textBox13.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.2D), Telerik.Reporting.Drawing.Unit.Cm(1.104D));
-			this.textBox13.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0.5D);
-			this.textBox13.Style.Font.Bold = true;
-			this.textBox13.Style.Font.Name = "Microsoft Sans Serif";
-			this.textBox13.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
-			this.textBox13.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(0D);
-			this.textBox13.Style.Padding.Right = Telerik.Reporting.Drawing.Unit.Point(0D);
-			this.textBox13.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
-			this.textBox13.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-			this.textBox13.Value = "수량";
 			// 
 			// textBox15
 			// 
