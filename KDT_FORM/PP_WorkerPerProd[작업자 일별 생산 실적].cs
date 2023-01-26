@@ -111,8 +111,15 @@ namespace KDT_Form
                                           , helper.CreateParameter("PRODSTARTDATE", sProdStartDate)
 								          , helper.CreateParameter("PRODENDDATE"  , sProdEndDate)
                                           );
+				if (dtTemp.Rows.Count == 0)
+                {
+                    ShowDialog("조회할 내역이없습니다.");
+                    grid1.DataSource = dtTemp;
+                    return;
+                }
 
-                if (dtTemp.Rows.Count != 0)
+
+					if (dtTemp.Rows.Count != 0)
                 {
                     #region < SUB-TOTAL LOGIC >
                     DataTable dtSubTale = dtTemp.Clone(); // 데이터 테이블 서직 복사.
