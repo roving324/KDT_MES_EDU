@@ -48,6 +48,18 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="WM_StockShip[제품재고 상차 등록].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WM_StockShip[제품재고 상차 등록].designer.cs">
+      <DependentUpon>WM_StockShip[제품재고 상차 등록].cs</DependentUpon>
+    </Compile>
+    <Compile Include="WM_StockWmRec[제품창고 현황 및 이력].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WM_StockWmRec[제품창고 현황 및 이력].designer.cs">
+      <DependentUpon>WM_StockWmRec[제품창고 현황 및 이력].cs</DependentUpon>
+    </Compile>
     <Compile Include="PP_StockWIPRec[재공 재고 입출 이력].cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +156,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="WM_ProdInStock[제품창고 입고].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WM_ProdInStock[제품창고 입고].designer.cs">
+      <DependentUpon>WM_ProdInStock[제품창고 입고].cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="DC00_assm, Version=1.0.1.3, Culture=neutral, processorArchitecture=MSIL">
@@ -226,6 +244,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="WM_StockShip[제품재고 상차 등록].resx">
+      <DependentUpon>WM_StockShip[제품재고 상차 등록].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WM_StockWmRec[제품창고 현황 및 이력].resx">
+      <DependentUpon>WM_StockWmRec[제품창고 현황 및 이력].cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PP_StockWIPRec[재공 재고 입출 이력].resx">
       <DependentUpon>PP_StockWIPRec[재공 재고 입출 이력].cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +299,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WM_ProdInStock[제품창고 입고].resx">
+      <DependentUpon>WM_ProdInStock[제품창고 입고].cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

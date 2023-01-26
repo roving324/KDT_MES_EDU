@@ -138,39 +138,6 @@ namespace KDT_Form
             }
         }
         #endregion 
-
-        public override void DoSave()
-        {
-            DBHelper helper = new DBHelper(false);
-            try
-            {
-                _GridUtil.Grid_Clear(grid1);
-                string sPlantCode = Convert.ToString(this.cboPlantCode.Value);
-                string sItemCode = Convert.ToString(this.cboItemCode.Value);
-                string sLotNo = Convert.ToString(txtLotNo.Text);
-                string sStartdate = string.Format("{0:yyyy-MM-dd}", dtStartDate.Value);
-                string sEndDate = string.Format("{0:yyyy-MM-dd}", dtEnddate.Value);
-
-                rtnDtTemp = helper.FillTable("PP_StockPP_U1", CommandType.StoredProcedure
-                                    , helper.CreateParameter("PLANTCODE", sPlantCode)
-                                    , helper.CreateParameter("ITEMCODE", sItemCode)
-                                    , helper.CreateParameter("LOTNO", sLotNo)
-                                    , helper.CreateParameter("STARTDATE", sStartdate)
-                                    , helper.CreateParameter("ENDDATE", sEndDate)
-                                    );
-
-                this.grid1.DataSource = rtnDtTemp;
-
-            }
-            catch (Exception ex)
-            {
-                ShowDialog(ex.ToString(), DialogForm.DialogType.OK);
-            }
-            finally
-            {
-                helper.Close();
-            }
-        }
     }
 }
 

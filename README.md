@@ -65,3 +65,17 @@ private void grid1_InitializeLayout(object sender, InitializeLayoutEventArgs e)
         e.Layout.Bands[0].Columns["ITEMNAME"].MergedCellEvaluator = CM1;
         e.Layout.Bands[0].Columns["PRODDATE"].MergedCellEvaluator = CM1;
 }
+```
+
+## 바코드 디자이너에 출력할 식별표 데이터 매핑
+```
+Report_LotBacodeFERT LotBacodeFERT = new Report_LotBacodeFERT();
+Telerik.Reporting.ReportBook reportBook = new Telerik.Reporting.ReportBook();
+
+LotBacodeFERT.DataSource = dttemp;
+
+reportBook.Reports.Add(LotBacodeFERT);
+
+ReportViewer Viewer = new ReportViewer(reportBook, 1);
+Viewer.ShowDialog();
+```
