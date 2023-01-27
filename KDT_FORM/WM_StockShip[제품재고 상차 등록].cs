@@ -169,7 +169,8 @@ namespace KDT_Form
                 string sLotNo     = string.Empty;
                 string sItemCode  = string.Empty;
                 string sPlantCode = string.Empty;
-                double dStockQTY  = 0;
+                string sShipNO    = string.Empty;
+                double dShipQTY   = 0;
 
 				foreach (DataRow dr in dtChange.Rows)
                 {
@@ -179,19 +180,21 @@ namespace KDT_Form
                             sLotNo = Convert.ToString(dr["LOTNO"]);
 							sItemCode = Convert.ToString(dr["ITEMCODE"]);
 							sPlantCode = Convert.ToString(dr["PLANTCODE"]);
-							dStockQTY = Convert.ToDouble(dr["STOCKQTY"]);
+							dShipQTY = Convert.ToDouble(dr["STOCKQTY"]);
 
-							helper.ExecuteNoneQuery("07MM_StockShip_U1", CommandType.StoredProcedure
+							helper.ExecuteNoneQuery("07WM_StockShip_U1", CommandType.StoredProcedure
                                                     , helper.CreateParameter("PLANTCODE", sPlantCode)
                                                     , helper.CreateParameter("ITEMCODE" , sItemCode)
                                                     , helper.CreateParameter("LOTNO"    , sLotNo)
 													, helper.CreateParameter("CARNO"    , sCarNo)
 													, helper.CreateParameter("WORKER"   , sWorker)
 													, helper.CreateParameter("CUSTCODE" , sCustCode)
-													, helper.CreateParameter("STOCKQTY" , dStockQTY)
+													, helper.CreateParameter("SHIPQTY"  , dShipQTY)
+													, helper.CreateParameter("SHIPNO"   , sShipNO)
 													, helper.CreateParameter("MAKER"    , LoginInfo.UserID)
 								);
-                            break;
+                            sShipNO = Convert.ToString(helper.RSMSG);
+							break;
                     }
 
 					if (helper.RSCODE != "S") throw new Exception(helper.RSMSG);

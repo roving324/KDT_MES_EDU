@@ -48,6 +48,12 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="WM_StockOutWm[제품 출고 등록].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WM_StockOutWm[제품 출고 등록].designer.cs">
+      <DependentUpon>WM_StockOutWm[제품 출고 등록].cs</DependentUpon>
+    </Compile>
     <Compile Include="WM_StockShip[제품재고 상차 등록].cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +250,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="WM_StockOutWm[제품 출고 등록].resx">
+      <DependentUpon>WM_StockOutWm[제품 출고 등록].cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WM_StockShip[제품재고 상차 등록].resx">
       <DependentUpon>WM_StockShip[제품재고 상차 등록].cs</DependentUpon>
     </EmbeddedResource>
