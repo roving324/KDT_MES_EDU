@@ -72,10 +72,10 @@ BOM
 
 <br/>
 
-
-
 ![생산실적등록](https://github.com/roving324/KDT_MES_EDU/blob/master/IMG/%EC%83%9D%EC%82%B0%EC%8B%A4%EC%A0%81.PNG)
 생산실적등록
+
+<br/>
 
 ![작업자 일별 실적 조회](https://github.com/roving324/KDT_MES_EDU/blob/master/IMG/%EC%9E%91%EC%97%85%EC%9E%90%20%EC%9D%BC%EB%B3%84%20%EC%8B%A4%EC%A0%81.PNG)
 작업자 일별 실적 조회
