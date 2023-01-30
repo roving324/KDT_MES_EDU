@@ -1,10 +1,10 @@
 ﻿#region < HEADER AREA >
 // *---------------------------------------------------------------------------------------------*
 //   Form ID      : PP_STockWIP
-//   Form Name    : 재공 재고 조회
+//   Form Name    : 제품 출고 이력 및 거래명세서 발행
 //   Name Space   : DC_PP
 //   Created Date : 2020/08
-//   Made By      : DSH
+//   Made By      : HJY
 //   Description  : 
 // *---------------------------------------------------------------------------------------------*
 #endregion
@@ -18,6 +18,8 @@ using DC00_assm;
 using DC00_WinForm;
 
 using Infragistics.Win.UltraWinGrid;
+using DC_POPUP;
+using Telerik.Reporting;
 #endregion
 
 namespace KDT_Form
@@ -107,8 +109,8 @@ namespace KDT_Form
                 string sPlantCode  = Convert.ToString(cboPlantCode.Value);
                 string sInvoiceNo  = Convert.ToString(txtInvoiceNo.Text);
 				string sCarNo      = Convert.ToString(txtCarNo.Text);
-				string sStartDate  = string.Format("0:yyyy-MM-dd", dtpStart.Value);
-				string sEndDate    = string.Format("0:yyyy-MM-dd", dtpEnd.Value);
+				string sStartDate  = string.Format("{0:yyyy-MM-dd}", dtpStart.Value);
+				string sEndDate    = string.Format("{0:yyyy-MM-dd}", dtpEnd.Value);
 
 				rtnDtTemp = helper.FillTable("07WM_TradingManager_S1", CommandType.StoredProcedure
                                                                    , helper.CreateParameter("PLANTCODE", sPlantCode)                  
@@ -128,9 +130,118 @@ namespace KDT_Form
             {
                 helper.Close();
             }
-        } 
-        #endregion
-    }
+        }
+		#endregion
+
+		private void grid1_AfterRowActivate(object sender, EventArgs e)
+		{
+			DBHelper helper = new DBHelper(false);
+			try
+			{
+				_GridUtil.Grid_Clear(grid2);
+				string sPlantCode = Convert.ToString(grid1.ActiveRow.Cells["PLANTCODE"].Value);
+				string sTradingNo = Convert.ToString(grid1.ActiveRow.Cells["TRADINGNO"].Value);
+
+				rtnDtTemp = helper.FillTable("07WM_TradingManager_S2", CommandType.StoredProcedure
+																   , helper.CreateParameter("PLANTCODE", sPlantCode)
+																   , helper.CreateParameter("TRADINGNO", sTradingNo)
+																   );
+				this.ClosePrgForm();
+				this.grid2.DataSource = rtnDtTemp;
+			}
+			catch (Exception ex)
+			{
+				ShowDialog(ex.ToString(), DialogForm.DialogType.OK);
+			}
+			finally
+			{
+				helper.Close();
+			}
+		}
+
+		private void btnInvPrint_Click(object sender, EventArgs e)
+		{
+            // 거래 명세서 발행 버튼 클릭.
+            if (grid1.Rows.Count == 0) return;
+            if (grid1.ActiveRow == null) return;
+
+			DBHelper helper = new DBHelper(false);
+			try
+			{
+				string sPlantCode = Convert.ToString(grid1.ActiveRow.Cells["PLANTCODE"].Value);
+				string sTradingNo = Convert.ToString(grid1.ActiveRow.Cells["TRADINGNO"].Value);
+
+				rtnDtTemp = helper.FillTable("07WM_TradingManager_S3", CommandType.StoredProcedure
+																   , helper.CreateParameter("PLANTCODE", sPlantCode)
+																   , helper.CreateParameter("TRADINGNO", sTradingNo)
+																   );
+				#region < 거래처 별로 거래 명세서 발행 >
+				// 거래처 별로 거래 명세서 발행.
+				if (rtnDtTemp.Rows.Count == 0) return;
+
+                // 받아온 데이터의 행 중에 업체의 개수가 몇 개인지 파악.
+                int iCustCount = 1; // 업체의 개수
+                string sCustName = Convert.ToString(rtnDtTemp.Rows[0]["CUSTNAME"]); // 업체명
+
+				for (int i = 1; i < rtnDtTemp.Rows.Count; i++)
+                {
+                    if(sCustName != Convert.ToString(rtnDtTemp.Rows[i]["CUSTNAME"])) // 일자별 업체 종류 파악
+                    {
+						sCustName = Convert.ToString(rtnDtTemp.Rows[i]["CUSTNAME"]);
+						iCustCount++;
+					}
+                }
+
+                // 데이터 테이블 배열 선언
+                DataTable[] dtReport = new DataTable[iCustCount];
+
+                // 새로 만든 데이터 테이블 배열의 컬럼 초기화.
+                dtReport[0] = new DataTable();
+                dtReport[0] = rtnDtTemp.Clone();
+
+                // 거래처 별로 데이터 배열에 나누어 담기
+                int iCustCount_2 = 0;
+                sCustName = Convert.ToString(rtnDtTemp.Rows[0]["CUSTNAME"]);
+				for (int i = 0; i < rtnDtTemp.Rows.Count; i++)
+				{
+					if (sCustName != Convert.ToString(rtnDtTemp.Rows[i]["CUSTNAME"]))
+                    {
+						iCustCount_2++;
+					    dtReport[iCustCount_2] = new DataTable();
+						dtReport[iCustCount_2] = rtnDtTemp.Clone();
+                        sCustName = Convert.ToString(rtnDtTemp.Rows[i]["CUSTNAME"]);
+					}
+                    dtReport[iCustCount_2].ImportRow(rtnDtTemp.Rows[i]);
+				}
+
+				// 거래명세 디자인 업체 수만큼 배연선언.
+				Report_specification_on_transaction[] report_Tran = new Report_specification_on_transaction[iCustCount];
+
+                ReportBook RepBook = new ReportBook();
+
+				// 거래명세 디자인 배열에 데이터 테이블 매핑
+				for (int i = 0; i < iCustCount; i++)
+                {
+                    report_Tran[i] = new Report_specification_on_transaction();
+					report_Tran[i].DataSource = dtReport[i];
+                    RepBook.Reports.Add(report_Tran[i]);
+				}
+
+				ReportViewer Viewer = new ReportViewer(RepBook);
+				Viewer.ShowDialog();
+
+				#endregion
+			}
+			catch (Exception ex)
+			{
+				ShowDialog(ex.ToString(), DialogForm.DialogType.OK);
+			}
+			finally
+			{
+				helper.Close();
+			}
+		}
+	}
 }
 
 

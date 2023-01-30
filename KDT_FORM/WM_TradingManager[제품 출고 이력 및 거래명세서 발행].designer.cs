@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.components = new System.ComponentModel.Container();
 			Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
 			Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
 			Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
@@ -42,8 +41,8 @@
 			Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
 			Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
 			Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
-			Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton1 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
-			Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton2 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
+			Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton3 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
+			Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton4 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
 			Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
 			Infragistics.Win.Appearance appearance24 = new Infragistics.Win.Appearance();
 			Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
@@ -60,7 +59,7 @@
 			Infragistics.Win.Appearance appearance61 = new Infragistics.Win.Appearance();
 			this.lblPlantCode = new DC00_Component.SLabel();
 			this.cboPlantCode = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
-			this.grid1 = new DC00_Component.Grid(this.components);
+			this.grid1 = new DC00_Component.Grid();
 			this.txtInvoiceNo = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
 			this.lblWorkerName_H = new DC00_Component.SLabel();
 			this.dtpEnd = new Infragistics.Win.UltraWinSchedule.UltraCalendarCombo();
@@ -73,7 +72,7 @@
 			this.ultraGroupBox1 = new Infragistics.Win.Misc.UltraGroupBox();
 			this.ultraSplitter1 = new Infragistics.Win.Misc.UltraSplitter();
 			this.ultraGroupBox2 = new Infragistics.Win.Misc.UltraGroupBox();
-			this.grid2 = new DC00_Component.Grid(this.components);
+			this.grid2 = new DC00_Component.Grid();
 			((System.ComponentModel.ISupportInitialize)(this.gbxHeader)).BeginInit();
 			this.gbxHeader.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gbxBody)).BeginInit();
@@ -227,7 +226,7 @@
 			this.grid1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
 			this.grid1.Location = new System.Drawing.Point(3, 24);
 			this.grid1.Name = "grid1";
-			this.grid1.Size = new System.Drawing.Size(1274, 247);
+			this.grid1.Size = new System.Drawing.Size(1274, 380);
 			this.grid1.TabIndex = 6;
 			this.grid1.TabStop = false;
 			this.grid1.Text = "grid1";
@@ -235,6 +234,7 @@
 			this.grid1.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChange;
 			this.grid1.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
 			this.grid1.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
+			this.grid1.AfterRowActivate += new System.EventHandler(this.grid1_AfterRowActivate);
 			// 
 			// txtInvoiceNo
 			// 
@@ -265,7 +265,7 @@
 			// 
 			// dtpEnd
 			// 
-			this.dtpEnd.DateButtons.Add(dateButton1);
+			this.dtpEnd.DateButtons.Add(dateButton3);
 			this.dtpEnd.Location = new System.Drawing.Point(575, 18);
 			this.dtpEnd.Name = "dtpEnd";
 			this.dtpEnd.NonAutoSizeHeight = 26;
@@ -274,7 +274,7 @@
 			// 
 			// dtpStart
 			// 
-			this.dtpStart.DateButtons.Add(dateButton2);
+			this.dtpStart.DateButtons.Add(dateButton4);
 			this.dtpStart.Location = new System.Drawing.Point(425, 18);
 			this.dtpStart.Name = "dtpStart";
 			this.dtpStart.NonAutoSizeHeight = 26;
@@ -349,6 +349,7 @@
 			this.btnInvPrint.Size = new System.Drawing.Size(144, 68);
 			this.btnInvPrint.TabIndex = 193;
 			this.btnInvPrint.Text = "명세서 발행";
+			this.btnInvPrint.Click += new System.EventHandler(this.btnInvPrint_Click);
 			// 
 			// ultraGroupBox1
 			// 
@@ -356,7 +357,7 @@
 			this.ultraGroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.ultraGroupBox1.Location = new System.Drawing.Point(6, 6);
 			this.ultraGroupBox1.Name = "ultraGroupBox1";
-			this.ultraGroupBox1.Size = new System.Drawing.Size(1280, 274);
+			this.ultraGroupBox1.Size = new System.Drawing.Size(1280, 407);
 			this.ultraGroupBox1.TabIndex = 7;
 			this.ultraGroupBox1.Text = "출고 실적 공통";
 			// 
@@ -364,7 +365,7 @@
 			// 
 			this.ultraSplitter1.BackColor = System.Drawing.Color.White;
 			this.ultraSplitter1.Dock = System.Windows.Forms.DockStyle.Top;
-			this.ultraSplitter1.Location = new System.Drawing.Point(6, 280);
+			this.ultraSplitter1.Location = new System.Drawing.Point(6, 413);
 			this.ultraSplitter1.Name = "ultraSplitter1";
 			this.ultraSplitter1.RestoreExtent = 274;
 			this.ultraSplitter1.Size = new System.Drawing.Size(1280, 12);
@@ -374,9 +375,9 @@
 			// 
 			this.ultraGroupBox2.Controls.Add(this.grid2);
 			this.ultraGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.ultraGroupBox2.Location = new System.Drawing.Point(6, 292);
+			this.ultraGroupBox2.Location = new System.Drawing.Point(6, 425);
 			this.ultraGroupBox2.Name = "ultraGroupBox2";
-			this.ultraGroupBox2.Size = new System.Drawing.Size(1280, 366);
+			this.ultraGroupBox2.Size = new System.Drawing.Size(1280, 233);
 			this.ultraGroupBox2.TabIndex = 9;
 			this.ultraGroupBox2.Text = "출고 실적 상세";
 			// 
@@ -458,7 +459,7 @@
 			this.grid2.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
 			this.grid2.Location = new System.Drawing.Point(3, 24);
 			this.grid2.Name = "grid2";
-			this.grid2.Size = new System.Drawing.Size(1274, 339);
+			this.grid2.Size = new System.Drawing.Size(1274, 206);
 			this.grid2.TabIndex = 6;
 			this.grid2.TabStop = false;
 			this.grid2.Text = "grid2";

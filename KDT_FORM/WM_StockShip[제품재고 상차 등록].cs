@@ -177,11 +177,11 @@ namespace KDT_Form
                     switch (dr.RowState)
                     {
                         case DataRowState.Modified:
-                            sLotNo = Convert.ToString(dr["LOTNO"]);
+							if (Convert.ToString(dr["CHK"]) != "1") continue;
+							sLotNo = Convert.ToString(dr["LOTNO"]);
 							sItemCode = Convert.ToString(dr["ITEMCODE"]);
 							sPlantCode = Convert.ToString(dr["PLANTCODE"]);
 							dShipQTY = Convert.ToDouble(dr["STOCKQTY"]);
-
 							helper.ExecuteNoneQuery("07WM_StockShip_U1", CommandType.StoredProcedure
                                                     , helper.CreateParameter("PLANTCODE", sPlantCode)
                                                     , helper.CreateParameter("ITEMCODE" , sItemCode)

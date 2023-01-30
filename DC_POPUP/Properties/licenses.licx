@@ -1,8 +1,9 @@
-Telerik.Reporting.Panel, Telerik.Reporting, Version=16.2.22.1109, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
 Telerik.ReportViewer.WinForms.ReportViewer, Telerik.ReportViewer.WinForms, Version=16.2.22.1109, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Infragistics.Win.Misc.UltraGroupBox, Infragistics2.Win.Misc.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
-Infragistics.Win.Misc.UltraButton, Infragistics2.Win.Misc.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
-Telerik.Reporting.TextBox, Telerik.Reporting, Version=16.2.22.1109, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Infragistics.Win.UltraWinEditors.UltraComboEditor, Infragistics2.Win.UltraWinEditors.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
 Telerik.Reporting.Barcode, Telerik.Reporting, Version=16.2.22.1109, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
+Telerik.Reporting.PictureBox, Telerik.Reporting, Version=16.2.22.1109, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
+Infragistics.Win.Misc.UltraButton, Infragistics2.Win.Misc.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
+Infragistics.Win.Misc.UltraGroupBox, Infragistics2.Win.Misc.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
+Infragistics.Win.UltraWinEditors.UltraComboEditor, Infragistics2.Win.UltraWinEditors.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
 Infragistics.Win.UltraWinSchedule.UltraCalendarCombo, Infragistics2.Win.UltraWinSchedule.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
+Telerik.Reporting.TextBox, Telerik.Reporting, Version=16.2.22.1109, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
+Telerik.Reporting.Panel, Telerik.Reporting, Version=16.2.22.1109, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
