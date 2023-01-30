@@ -4,6 +4,8 @@
 
 MES를 사용하는 이유
 LOTTRACKING (LOT 추적)
+4MAN 맨, 머신, 매트리얼, 메소드
+LOT
 
 1. 투입 LOT 생산LOT
 
@@ -109,6 +111,12 @@ CLOSE CUR_TRADING_B
 -- 5-8. 커서 선언 종료
 DEALLOCATE CUR_TRADING_B
 ```
+## SQL 행번호 추가
+
+```
+ROW_NUMBER() OVER(ORDER BY A.MAKEDATE)
+```
+
 
 # 구현화면
 ![BOM](https://github.com/roving324/KDT_MES_EDU/blob/master/IMG/BOM.PNG)
