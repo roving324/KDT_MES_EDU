@@ -66,6 +66,50 @@ Viewer.ShowDialog();
 BOM 품목을 생산하는데 필요한 상/하위 리스트를 모아놓은 것(필수데이터) 완성품목 투입품목 1수량 단위 투입수량
 LOT
 
+## SQL 반목문
+```
+ -- 5-3. 커서 시작 선언
+OPEN CUR_TRADING_B
+-- 5-4. 반복하는 행 별로 데이터가 담기는 변수.
+FETCH NEXT FROM CUR_TRADING_B INTO @LS_LOTNO, @LS_ITEMCODE, @LF_SHIPQTY, @LI_SHIPSEQ, @LS_UNITCODE
+-- 5-5 반복을 종료하는 시점
+WHILE @@FETCH_STATUS = 0
+BEGIN
+  -- 5-6. 반복문을 수행하는 로직
+
+  -- 6. 출하 실적 상세 데이터 등록
+  INSERT INTO TB_TradingWM_B (PLANTCODE  , TRADINGNO                       , TRADINGSEQ       , LOTNO      , ITEMCODE,
+                              TRADINGQTY , SHIPNO                          , SHIPSEQ          , MAKEDATE   , MAKER)
+					  VALUES (@PLANTCODE , ISNULL(@LS_TRADINGNO,@TRADINGNO), @LI_TRADINGNO_SEQ, @LS_LOTNO  , @LS_ITEMCODE,
+					          @LF_SHIPQTY, @SHIPNO                         , @LI_SHIPSEQ      , @LD_NOWDATE, @MAKER)
+  SET @LI_TRADINGNO_SEQ = @LI_TRADINGNO_SEQ + 1
+
+  -- 7. 제품 재고 삭제
+  DELETE TB_StockWM
+   WHERE PLANTCODE = @PLANTCODE
+     AND LOTNO     = @LS_LOTNO
+
+  -- 8. 제품 재고 출고 이력 등록
+  DECLARE @LI_INOUTSEQ INT
+  SELECT @LI_INOUTSEQ = ISNULL(MAX(INOUTSEQ),0) + 1
+    FROM TB_StockWMrec WITH(NOLOCK)
+   WHERE PLANTCODE    = @PLANTCODE
+     AND RECDATE      = @LS_NOWDATE
+
+  INSERT INTO TB_StockWMrec (PLANTCODE , RECDATE    , INOUTSEQ    , LOTNO       , ITEMCODE    , WHCODE ,
+                             INOUTFLAG , INOUTCODE  , INOUTQTY    , UNITCODE    , MAKEDATE    , MAKER  )
+					 VALUES (@PLANTCODE, @LS_NOWDATE, @LI_INOUTSEQ, @LS_LOTNO   , @LS_ITEMCODE, 'WH003',
+					         'O'       , '60'       , @LF_SHIPQTY , @LS_UNITCODE, @LD_NOWDATE , @MAKER )
+
+
+  FETCH NEXT FROM CUR_TRADING_B INTO @LS_LOTNO, @LS_ITEMCODE, @LF_SHIPQTY, @LI_SHIPSEQ, @LS_UNITCODE
+END
+-- 5-7. 반복문 종료
+CLOSE CUR_TRADING_B
+-- 5-8. 커서 선언 종료
+DEALLOCATE CUR_TRADING_B
+```
+
 # 구현화면
 ![BOM](https://github.com/roving324/KDT_MES_EDU/blob/master/IMG/BOM.PNG)
 BOM
