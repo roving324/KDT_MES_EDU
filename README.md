@@ -109,6 +109,12 @@ CLOSE CUR_TRADING_B
 -- 5-8. 커서 선언 종료
 DEALLOCATE CUR_TRADING_B
 ```
+## SQL 행번호 추가
+
+```
+ROW_NUMBER() OVER(ORDER BY A.MAKEDATE)
+```
+
 
 # 구현화면
 ![BOM](https://github.com/roving324/KDT_MES_EDU/blob/master/IMG/BOM.PNG)
