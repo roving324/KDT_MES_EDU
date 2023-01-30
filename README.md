@@ -66,7 +66,7 @@ Viewer.ShowDialog();
 BOM 품목을 생산하는데 필요한 상/하위 리스트를 모아놓은 것(필수데이터) 완성품목 투입품목 1수량 단위 투입수량
 LOT
 
-## SQL 
+## SQL 반목문
 ```
  -- 5-3. 커서 시작 선언
 OPEN CUR_TRADING_B
