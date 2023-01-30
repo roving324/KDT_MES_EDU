@@ -4,6 +4,8 @@
 
 MES를 사용하는 이유
 LOTTRACKING (LOT 추적)
+4MAN 맨, 머신, 매트리얼, 메소드
+LOT
 
 1. 투입 LOT 생산LOT
 
