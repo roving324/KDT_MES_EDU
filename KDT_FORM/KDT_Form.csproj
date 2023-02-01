@@ -48,6 +48,12 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="PP_LotTracking[LOT 트래킹].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PP_LotTracking[LOT 트래킹].designer.cs">
+      <DependentUpon>PP_LotTracking[LOT 트래킹].cs</DependentUpon>
+    </Compile>
     <Compile Include="WM_TradingManager[제품 출고 이력 및 거래명세서 발행].cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +262,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="PP_LotTracking[LOT 트래킹].resx">
+      <DependentUpon>PP_LotTracking[LOT 트래킹].cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WM_TradingManager[제품 출고 이력 및 거래명세서 발행].resx">
       <DependentUpon>WM_TradingManager[제품 출고 이력 및 거래명세서 발행].cs</DependentUpon>
     </EmbeddedResource>
