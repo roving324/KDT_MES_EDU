@@ -54,6 +54,12 @@
     <Compile Include="PP_LotTracking[LOT 트래킹].designer.cs">
       <DependentUpon>PP_LotTracking[LOT 트래킹].cs</DependentUpon>
     </Compile>
+    <Compile Include="PP_WCTRunStopList[작업장 비가동 현황 및 사유관리].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PP_WCTRunStopList[작업장 비가동 현황 및 사유관리].designer.cs">
+      <DependentUpon>PP_WCTRunStopList[작업장 비가동 현황 및 사유관리].cs</DependentUpon>
+    </Compile>
     <Compile Include="WM_TradingManager[제품 출고 이력 및 거래명세서 발행].cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +270,9 @@
   <ItemGroup>
     <EmbeddedResource Include="PP_LotTracking[LOT 트래킹].resx">
       <DependentUpon>PP_LotTracking[LOT 트래킹].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PP_WCTRunStopList[작업장 비가동 현황 및 사유관리].resx">
+      <DependentUpon>PP_WCTRunStopList[작업장 비가동 현황 및 사유관리].cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WM_TradingManager[제품 출고 이력 및 거래명세서 발행].resx">
       <DependentUpon>WM_TradingManager[제품 출고 이력 및 거래명세서 발행].cs</DependentUpon>
