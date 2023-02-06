@@ -42,21 +42,10 @@
 			Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
 			Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
 			Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
-			Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton5 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
-			Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton6 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
+			Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton1 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
+			Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton2 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
 			Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
 			Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
-			Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
-			Infragistics.Win.Appearance appearance33 = new Infragistics.Win.Appearance();
-			Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
-			Infragistics.Win.Appearance appearance35 = new Infragistics.Win.Appearance();
-			Infragistics.Win.Appearance appearance36 = new Infragistics.Win.Appearance();
-			Infragistics.Win.Appearance appearance43 = new Infragistics.Win.Appearance();
-			Infragistics.Win.Appearance appearance44 = new Infragistics.Win.Appearance();
-			Infragistics.Win.Appearance appearance57 = new Infragistics.Win.Appearance();
-			Infragistics.Win.Appearance appearance58 = new Infragistics.Win.Appearance();
-			Infragistics.Win.Appearance appearance59 = new Infragistics.Win.Appearance();
-			Infragistics.Win.Appearance appearance61 = new Infragistics.Win.Appearance();
 			this.lblPlantCode = new DC00_Component.SLabel();
 			this.cboPlantCode = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
 			this.grid1 = new DC00_Component.Grid(this.components);
@@ -65,10 +54,6 @@
 			this.dtpStart = new Infragistics.Win.UltraWinSchedule.UltraCalendarCombo();
 			this.sLabel6 = new DC00_Component.SLabel();
 			this.sLabel4 = new DC00_Component.SLabel();
-			this.ultraGroupBox1 = new Infragistics.Win.Misc.UltraGroupBox();
-			this.ultraGroupBox2 = new Infragistics.Win.Misc.UltraGroupBox();
-			this.grid2 = new DC00_Component.Grid(this.components);
-			this.ultraSplitter1 = new Infragistics.Win.Misc.UltraSplitter();
 			this.cboWorkcenterCode = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
 			((System.ComponentModel.ISupportInitialize)(this.gbxHeader)).BeginInit();
 			this.gbxHeader.SuspendLayout();
@@ -78,11 +63,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtpEnd)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtpStart)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.ultraGroupBox1)).BeginInit();
-			this.ultraGroupBox1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.ultraGroupBox2)).BeginInit();
-			this.ultraGroupBox2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.grid2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cboWorkcenterCode)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -109,12 +89,9 @@
 			this.gbxBody.ContentPadding.Left = 4;
 			this.gbxBody.ContentPadding.Right = 4;
 			this.gbxBody.ContentPadding.Top = 6;
-			this.gbxBody.Controls.Add(this.ultraGroupBox2);
-			this.gbxBody.Controls.Add(this.ultraSplitter1);
-			this.gbxBody.Controls.Add(this.ultraGroupBox1);
+			this.gbxBody.Controls.Add(this.grid1);
 			this.gbxBody.Location = new System.Drawing.Point(3, 111);
 			this.gbxBody.Size = new System.Drawing.Size(1292, 664);
-			this.gbxBody.Text = "작업장 가동/비가동 현황";
 			// 
 			// lblPlantCode
 			// 
@@ -218,9 +195,9 @@
 			this.grid1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.grid1.EnterNextRowEnable = true;
 			this.grid1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.grid1.Location = new System.Drawing.Point(3, 0);
+			this.grid1.Location = new System.Drawing.Point(6, 6);
 			this.grid1.Name = "grid1";
-			this.grid1.Size = new System.Drawing.Size(1274, 322);
+			this.grid1.Size = new System.Drawing.Size(1280, 652);
 			this.grid1.TabIndex = 6;
 			this.grid1.TabStop = false;
 			this.grid1.Text = "grid1";
@@ -228,7 +205,6 @@
 			this.grid1.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChange;
 			this.grid1.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
 			this.grid1.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
-			this.grid1.AfterRowActivate += new System.EventHandler(this.grid1_AfterRowActivate);
 			// 
 			// lblItemCode
 			// 
@@ -250,7 +226,7 @@
 			// 
 			// dtpEnd
 			// 
-			this.dtpEnd.DateButtons.Add(dateButton5);
+			this.dtpEnd.DateButtons.Add(dateButton1);
 			this.dtpEnd.Location = new System.Drawing.Point(1121, 24);
 			this.dtpEnd.Name = "dtpEnd";
 			this.dtpEnd.NonAutoSizeHeight = 26;
@@ -259,7 +235,7 @@
 			// 
 			// dtpStart
 			// 
-			this.dtpStart.DateButtons.Add(dateButton6);
+			this.dtpStart.DateButtons.Add(dateButton2);
 			this.dtpStart.Location = new System.Drawing.Point(971, 24);
 			this.dtpStart.Name = "dtpStart";
 			this.dtpStart.NonAutoSizeHeight = 26;
@@ -300,122 +276,6 @@
 			this.sLabel4.TabIndex = 197;
 			this.sLabel4.Text = "가동 일자";
 			// 
-			// ultraGroupBox1
-			// 
-			this.ultraGroupBox1.Controls.Add(this.grid1);
-			this.ultraGroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-			this.ultraGroupBox1.Location = new System.Drawing.Point(6, 30);
-			this.ultraGroupBox1.Name = "ultraGroupBox1";
-			this.ultraGroupBox1.Size = new System.Drawing.Size(1280, 325);
-			this.ultraGroupBox1.TabIndex = 7;
-			// 
-			// ultraGroupBox2
-			// 
-			this.ultraGroupBox2.Controls.Add(this.grid2);
-			this.ultraGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.ultraGroupBox2.Location = new System.Drawing.Point(6, 370);
-			this.ultraGroupBox2.Name = "ultraGroupBox2";
-			this.ultraGroupBox2.Size = new System.Drawing.Size(1280, 288);
-			this.ultraGroupBox2.TabIndex = 8;
-			this.ultraGroupBox2.Text = "작업장/작업지시 별 사유관리";
-			// 
-			// grid2
-			// 
-			this.grid2.AutoResizeColumn = true;
-			this.grid2.AutoUserColumn = true;
-			this.grid2.ContextMenuCopyEnabled = true;
-			this.grid2.ContextMenuDeleteEnabled = true;
-			this.grid2.ContextMenuExcelEnabled = true;
-			this.grid2.ContextMenuInsertEnabled = true;
-			this.grid2.ContextMenuPasteEnabled = true;
-			this.grid2.DeleteButtonEnable = true;
-			appearance29.BackColor = System.Drawing.SystemColors.Window;
-			appearance29.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-			this.grid2.DisplayLayout.Appearance = appearance29;
-			this.grid2.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-			this.grid2.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
-			this.grid2.DisplayLayout.DefaultSelectedBackColor = System.Drawing.Color.Empty;
-			appearance33.BackColor = System.Drawing.SystemColors.ActiveBorder;
-			appearance33.BackColor2 = System.Drawing.SystemColors.ControlDark;
-			appearance33.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-			appearance33.BorderColor = System.Drawing.SystemColors.Window;
-			this.grid2.DisplayLayout.GroupByBox.Appearance = appearance33;
-			appearance34.ForeColor = System.Drawing.SystemColors.GrayText;
-			this.grid2.DisplayLayout.GroupByBox.BandLabelAppearance = appearance34;
-			this.grid2.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-			this.grid2.DisplayLayout.GroupByBox.Hidden = true;
-			appearance35.BackColor = System.Drawing.SystemColors.ControlLightLight;
-			appearance35.BackColor2 = System.Drawing.SystemColors.Control;
-			appearance35.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-			appearance35.ForeColor = System.Drawing.SystemColors.GrayText;
-			this.grid2.DisplayLayout.GroupByBox.PromptAppearance = appearance35;
-			this.grid2.DisplayLayout.MaxColScrollRegions = 1;
-			this.grid2.DisplayLayout.MaxRowScrollRegions = 1;
-			appearance36.BackColor = System.Drawing.SystemColors.Window;
-			appearance36.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.grid2.DisplayLayout.Override.ActiveCellAppearance = appearance36;
-			appearance43.BackColor = System.Drawing.SystemColors.Highlight;
-			appearance43.ForeColor = System.Drawing.SystemColors.HighlightText;
-			this.grid2.DisplayLayout.Override.ActiveRowAppearance = appearance43;
-			this.grid2.DisplayLayout.Override.AllowDelete = Infragistics.Win.DefaultableBoolean.True;
-			this.grid2.DisplayLayout.Override.AllowMultiCellOperations = ((Infragistics.Win.UltraWinGrid.AllowMultiCellOperation)((((((((Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Copy | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.CopyWithHeaders) 
-            | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Cut) 
-            | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Delete) 
-            | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Paste) 
-            | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Undo) 
-            | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Redo) 
-            | Infragistics.Win.UltraWinGrid.AllowMultiCellOperation.Reserved)));
-			this.grid2.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
-			this.grid2.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
-			appearance44.BackColor = System.Drawing.SystemColors.Window;
-			this.grid2.DisplayLayout.Override.CardAreaAppearance = appearance44;
-			appearance57.BorderColor = System.Drawing.Color.Silver;
-			appearance57.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
-			this.grid2.DisplayLayout.Override.CellAppearance = appearance57;
-			this.grid2.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
-			this.grid2.DisplayLayout.Override.CellPadding = 0;
-			appearance58.BackColor = System.Drawing.SystemColors.Control;
-			appearance58.BackColor2 = System.Drawing.SystemColors.ControlDark;
-			appearance58.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
-			appearance58.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-			appearance58.BorderColor = System.Drawing.SystemColors.Window;
-			this.grid2.DisplayLayout.Override.GroupByRowAppearance = appearance58;
-			this.grid2.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
-			this.grid2.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand;
-			appearance59.BackColor = System.Drawing.SystemColors.Window;
-			appearance59.BorderColor = System.Drawing.Color.Silver;
-			this.grid2.DisplayLayout.Override.RowAppearance = appearance59;
-			this.grid2.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
-			appearance61.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.grid2.DisplayLayout.Override.TemplateAddRowAppearance = appearance61;
-			this.grid2.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
-			this.grid2.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
-			this.grid2.DisplayLayout.SelectionOverlayBorderThickness = 2;
-			this.grid2.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
-			this.grid2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.grid2.EnterNextRowEnable = true;
-			this.grid2.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.grid2.Location = new System.Drawing.Point(3, 24);
-			this.grid2.Name = "grid2";
-			this.grid2.Size = new System.Drawing.Size(1274, 261);
-			this.grid2.TabIndex = 6;
-			this.grid2.TabStop = false;
-			this.grid2.Text = "grid2";
-			this.grid2.TextRenderingMode = Infragistics.Win.TextRenderingMode.GDI;
-			this.grid2.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChange;
-			this.grid2.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
-			this.grid2.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
-			// 
-			// ultraSplitter1
-			// 
-			this.ultraSplitter1.BackColor = System.Drawing.Color.White;
-			this.ultraSplitter1.Dock = System.Windows.Forms.DockStyle.Top;
-			this.ultraSplitter1.Location = new System.Drawing.Point(6, 355);
-			this.ultraSplitter1.Name = "ultraSplitter1";
-			this.ultraSplitter1.RestoreExtent = 244;
-			this.ultraSplitter1.Size = new System.Drawing.Size(1280, 15);
-			this.ultraSplitter1.TabIndex = 9;
-			// 
 			// cboWorkcenterCode
 			// 
 			this.cboWorkcenterCode.Font = new System.Drawing.Font("맑은 고딕", 10F);
@@ -440,11 +300,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.grid1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtpEnd)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtpStart)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.ultraGroupBox1)).EndInit();
-			this.ultraGroupBox1.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.ultraGroupBox2)).EndInit();
-			this.ultraGroupBox2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.grid2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.cboWorkcenterCode)).EndInit();
 			this.ResumeLayout(false);
 
@@ -459,10 +314,6 @@
 		private Infragistics.Win.UltraWinSchedule.UltraCalendarCombo dtpStart;
 		private DC00_Component.SLabel sLabel6;
 		private DC00_Component.SLabel sLabel4;
-		private Infragistics.Win.Misc.UltraGroupBox ultraGroupBox2;
-		private DC00_Component.Grid grid2;
-		private Infragistics.Win.Misc.UltraSplitter ultraSplitter1;
-		private Infragistics.Win.Misc.UltraGroupBox ultraGroupBox1;
 		private Infragistics.Win.UltraWinEditors.UltraComboEditor cboWorkcenterCode;
 	}
 }
